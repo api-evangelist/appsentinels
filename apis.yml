@@ -1,23 +1,61 @@
 aid: appsentinels
+
 name: AppSentinels
-description: 'AppSentinels is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'AppSentinels provides a unified agentic AI and API security platform that discovers, tests, and protects APIs against business logic and AI-driven threats. Leveraging AI, it offers continuous monitoring, automated testing, and actionable insights to secure modern API ecosystems.'
+
 url: https://raw.githubusercontent.com/api-evangelist/appsentinels/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-20 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-20'
+
 modified: '2026-10-20'
+
 tags:
-- Company
-apis: []
+- Security
+- AI
+- API
+- Monitoring
+- Platform
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/appsentinels-hosts.yml
+- type: DomainSecurity
+  url: security/appsentinels-domain-security.yml
 - type: Website
   url: https://appsentinels.ai/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-20'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://appsentinels.ai/
+    status: 200
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
