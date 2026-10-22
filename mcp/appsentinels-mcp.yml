@@ -2,8 +2,9 @@ generated: '2026-10-20'
 method: derived
 deployment:
   mode: none
-  endpoint: ""
-  install: ""
-  package: ""
+  endpoint: null
+  install: null
+  package: null
   auth: unknown
   verified: derived
+source: []
